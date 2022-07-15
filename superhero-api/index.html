@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Superheroes</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="desc">
+                <h1 id="name"></h1>
+                <span id="work"></span>
+            </div>
+            <div class="image">
+                <img id="img"
+                    src="https://png.pngtree.com/png-vector/20191118/ourmid/pngtree-loading-logo-design-circle-loading-illustration-on-white-background-png-image_1996461.jpg"
+                    alt="heroImg">
+            </div>
+            <div class="stats">
+                <span class="stat_name" id="intel"></span>
+                <span class="stat_name" id="strength"></span>
+                <span class="stat_name" id="speed"></span>
+                <span class="stat_name" id="dura"></span>
+                <span class="stat_name" id="power"></span>
+                <span class="stat_name" id="combat"></span>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="search">
+                <input type="text" name="heroName" id="query">
+                <button id="search">Search Hero</button>
+            </div>
+            <div class="random">
+                <button id="random">Get Random Hero</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
