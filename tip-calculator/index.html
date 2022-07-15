@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <div class="container-center">
+        <h1 id="heading">Tip Calculator</h1>
+        <div class="input-cont">
+            <h2>Bill Total</h2>
+            <input type="number" name="total" id="total">
+        </div>
+        <div class="input-cont">
+            <h2>Tip</h2>
+            <input type="number" name="tip" id="tip">
+        </div>
+        <div class="container-2">
+            <div class="count">
+                <h3>People</h3>
+                <div class="btn">
+                    <input type="button" value="+" class="but" id="inc">
+                    <p id="count">1</p>
+                    <input type="button" value="-" class="but" id="dec">
+                </div>
+            </div>
+            <div class="result">
+                <h3>Total per person</h3>
+                <h1 id="result">$ 0.00</h1>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

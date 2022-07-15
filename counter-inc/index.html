@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        .cont {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .box {
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .btn {
+            display: block;
+            width: 200px;
+            height: 40px;
+            background-color: antiquewhite;
+            margin: 40px auto;
+        }
+
+        p {
+            font-size: 30px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div id="red" class="box red">
+            <p>0</p>
+        </div>
+        <div id="green" class="box green">
+            <p>0</p>
+        </div>
+        <div id="blue" class="box blue">
+            <p>0</p>
+        </div>
+    </div>
+    <button id="btn" class="btn">Reset</button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
