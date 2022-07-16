@@ -15,7 +15,6 @@
         <div class="container">
             <div class="desc">
                 <h1 id="name"></h1>
-                <span id="work"></span>
             </div>
             <div class="image">
                 <img id="img"
@@ -33,8 +32,10 @@
         </div>
         <div class="controls">
             <div class="search">
-                <input type="text" name="heroName" id="query">
-                <button id="search">Search Hero</button>
+                <form>
+                    <input type="text" name="heroName" id="query">
+                    <button type="submit" id="search">Search Hero</button>
+                </form>
             </div>
             <div class="random">
                 <button id="random">Get Random Hero</button>

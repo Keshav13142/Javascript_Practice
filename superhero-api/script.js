@@ -4,7 +4,6 @@ const loading =
   "https://png.pngtree.com/png-vector/20191118/ourmid/pngtree-loading-logo-design-circle-loading-illustration-on-white-background-png-image_1996461.jpg";
 const BASE_URL = "https://superheroapi.com/api.php/869623557735791";
 const super_name = document.querySelector("#name");
-const work = document.querySelector("#work");
 const img = document.querySelector("#img");
 const intel = document.querySelector("#intel");
 const strength = document.querySelector("#strength");
@@ -17,9 +16,7 @@ const query = document.querySelector("#query");
 const search = document.querySelector("#search");
 
 const getSuperHero = async (id) => {
-  const data = await fetch(`${BASE_URL + "/"}${id}`)
-    .then((res) => res.json())
-    .catch(() => dispError());
+  const data = await (await fetch(`${BASE_URL + "/"}${id}`)).json();
   displayData(data);
 };
 
@@ -33,7 +30,6 @@ const displayData = (data) => {
   dura.innerHTML = getStats("Durability", data.powerstats.durability);
   power.innerHTML = getStats("Power", data.powerstats.power);
   combat.innerHTML = getStats("Combat Ability", data.powerstats.combat);
-  work.innerHTML = data.work.occupation;
   img.src = data.image.url;
 };
 
@@ -41,16 +37,15 @@ const getStats = (name, value) => {
   return name + " : <span class='number'>" + value + "</span>";
 };
 
-search.onclick = () => {
+search.onclick = (e) => {
+  e.preventDefault();
   img.src = loading;
   const key = query.value;
   searchSuperhero(key);
 };
 
 const searchSuperhero = async (key) => {
-  const data = await fetch(`${BASE_URL + "/search/"}${key}`)
-    .then((res) => res.json())
-    .catch((err) => console.log(err));
+  const data = await (await fetch(`${BASE_URL + "/search/"}${key}`)).json();
   if (data.response === "error") dispError();
   else displayData(data.results[0] || data.results);
 };
@@ -69,6 +64,5 @@ const dispError = () => {
   dura.innerHTML = "";
   power.innerHTML = "";
   combat.innerHTML = "";
-  work.innerHTML = "";
   img.src = no_img;
 };
