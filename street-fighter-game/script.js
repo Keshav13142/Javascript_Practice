@@ -26,16 +26,15 @@ class Player {
   };
   heal = () => {
     if (this.count <= 3) {
-      if (this.hp >= 100) {
-        return;
+      if (this.hp < 100) {
+        this.hp += 20;
+        updateHealth();
+        this.count++;
+        if (this.hp > 100) {
+          this.hp = 100;
+        }
+        heal.play();
       }
-      this.hp += 20;
-      updateHealth();
-      this.count++;
-      if (this.hp > 100) {
-        this.hp = 100;
-      }
-      heal.play();
     }
   };
 }
