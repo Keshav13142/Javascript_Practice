@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+img {
+  height: 400px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.attack,
+.heal {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.controls button {
+  width: 100px;
+  border: none;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 20px;
+  height: 40px;
+}
+
+.controls span {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.attack button {
+  background-color: rgb(16, 118, 201);
+}
+
+.heal button {
+  background-color: rgb(71, 216, 41);
+}
+
+audio {
+  display: none;
+}
+
+.btn {
+  display: flex;
+  gap: 20px;
+}
+.btn button {
+  font-weight: bolder;
+  width: 100px;
+  border: none;
+  font-size: 16px;
+  border-radius: 20px;
+  height: 40px;
+}
+
+#reset {
+  background-color: rgb(247, 85, 85);
+}
+
+#start {
+  background-color: rgb(149, 104, 216);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.results {
+  color: rgb(255, 0, 0);
+  text-decoration: underline double;
+}

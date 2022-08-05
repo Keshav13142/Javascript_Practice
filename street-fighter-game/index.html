@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Street fighter game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="results">
+            <h1 id="result"></h1>
+        </div>
+        <div class="wrapper">
+            <div class="player">
+                <img src="./images/p1.gif">
+                <div class="controls">
+                    <h1>Player 1</h1>
+                    <div class="attack">
+                        <span>Q :</span>
+                        <button id="p1a">Attack</button>
+                    </div>
+                    <div class="heal">
+                        <span>W :</span>
+                        <button id="heal1">Heal</button>
+                    </div>
+                    <span id="p1h">----</span>
+                </div>
+            </div>
+            <div class="player">
+                <img src="./images/p2.gif">
+                <div class="controls">
+                    <h1>Player 2</h1>
+                    <div class="attack">
+                        <span>P :</span>
+                        <button id="p2a">Attack</button>
+                    </div>
+                    <div class="heal">
+                        <span>O :</span>
+                        <button id="heal2">Heal</button>
+                    </div>
+                    <span id="p2h">----</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <div class="audios">
+        <audio src="./audio/punch.mp3" id="punch" type="audio/mpeg"></audio>
+        <audio src="./audio/ready-fight.mp3" id="ready-fight" type="audio/mpeg"></audio>
+        <audio src="./audio/sigh.wav" id="sigh" type="audio/mpeg"></audio>
+        <audio src="./audio/victory.mp3" id="victory" type="audio/mpeg"></audio>
+        <audio src="./audio/chop.mp3" id="chop" type="audio/mpeg"></audio>
+        <audio src="./audio/heal.mp3" id="heal" type="audio/mpeg"></audio>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
